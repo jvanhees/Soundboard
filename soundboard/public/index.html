@@ -5,23 +5,33 @@
     <link rel="stylesheet" type="text/css" href="css/base.css">
   </head>
   <body>
-    <div class="container">
-      <h1>Soundboard</h1>
-      <p>
-        To play sounds from the central speaker for extra effect, join the room "server"...
-      </p>
-      <p>
-        <label>Room name:</label>
-        <input id="roomIdField" type="text"/>
-        <button id="joinRoomButton">join room</button>
-        <span id="roomOccupants">1</span>
-        users
-      </p>
+    <header class="indigo white-text">
+      <div class="container">
+        <h1>Soundboard</h1>
+        <p class="flow-text">To play sounds from the central speaker for extra effect, join the room "server"...</p>
+      </div>
+    </header>
 
-      <div id="soundbuttons"></div>
-    </div>
+    <section class="container">
+        <div class="row">
+          <div class="input-field col s6">
+            <input placeholder="Room name" id="roomIdField" type="text">
+            <label for="roomIdField">Room name</label>
+          </div>
+          <div class="input-field col s6">
+            <button class="orange darken-4 btn waves-effect waves-light white-text" id="joinRoomButton">Join room</button>
+            <p class="room-occupants"><span id="roomOccupants">0</span> occupants</p>
+          </div>
+        </div>
+      </div>
+    </section>
 
-    <script src="js/bundle.js"></script>
+    <section class="" id="soundbuttons">
+
+    </section>
+
+    <script src="js/jquery.js"></script>
     <script src="js/materialize.min.js"></script>
+    <script src="js/bundle.js"></script>
   </body>
 </html>

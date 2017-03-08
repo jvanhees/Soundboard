@@ -1,52 +1,49 @@
-html {
-
-}
-body {
+header {
+  overflow: auto;
+  margin-bottom: 2%;
 }
 
 h1 {
-  text-align: center;
-  color: #333;
-  clear: both;
+  font-weight: lighter;
 }
 
-#soundbuttons {
-  margin-bottom: 15px;
+#soundButtons {
+  margin: 0 2% 5%;
 }
 
-.soundRow {
-  background-color: #eee;
-  position: relative;
-  transition: border-left 0.05s linear;
-  border-left: 20px solid #ddd;
-  margin: 5px 0px;
-  transition: background-color 0.05s linear;
-
-  -webkit-user-select: none; /* webkit (safari, chrome) browsers */
-  -moz-user-select: none; /* mozilla browsers */
-  -khtml-user-select: none; /* webkit (konqueror) browsers */
-  -ms-user-select: none; /* IE10+ */
+#soundButtons .sound-button {
+  width: 94%;
+  margin: 3%;
 }
 
-.soundRow:hover {
-  cursor: pointer;
+@media (min-width: 400px) {
+  #soundButtons .sound-button {
+    width: 46%;
+    margin: 2%;
+  }
 }
 
-.soundRow.active {
-  border-left: 20px solid #DC381F;
+@media (min-width: 600px) {
+  #soundButtons .sound-button {
+    width: 30.33%;
+    margin: 1.5%;
+  }
 }
 
-.soundButton {
-  padding: 5px 100px 5px 5px;
+@media (min-width: 800px) {
+  #soundButtons .sound-button {
+    width: 23%;
+    margin: 1%;
+  }
 }
 
-.soundRow.bump {
-  background-color: #DC381F;
+@media (min-width: 1000px) {
+  #soundButtons .sound-button {
+    width: 19%;
+    margin: .5%;
+  }
 }
 
-
-.soundSource {
-  position: absolute;
-  top:4px;
-  right:8px;
+.room-occupants {
+  float: right;
 }

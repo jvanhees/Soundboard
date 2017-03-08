@@ -16,6 +16,8 @@ Server.roomCounter = document.getElementById("roomOccupants");
 window.addEventListener("hashchange", Server.updateFromHash.bind(Server));
 
 let container = document.getElementById("soundbuttons");
+let buttonColor = 'grey';
+let buttonRegex = new RegExp(buttonColor, "g");
 
 
 let play = function(sound){
@@ -38,9 +40,9 @@ Server.playSound = function(sound){
     } else {
       let element = container.querySelector("[data-filename='" + sound.file + "']");
       if (element){
-        element.className += " active bump";
+        element.className = element.className.replace(buttonRegex, "orange darken-4");
         setTimeout(function(){
-          element.className = element.className.replace(/ bump/g, "");
+          element.className = element.className.replace(/orange darken\-4/g, "orange darken-4");
         }, 200);
       }
     }
@@ -58,14 +60,14 @@ let soundFinished = function(file){
 
   let element = container.querySelector("[data-filename='" + file + "']");
   if (element){
-    element.className = element.className.replace(/ active/g,"");
+    element.className = element.className.replace(/orange darken\-4/g, buttonColor);
   }
   delete timeouts[file];
 }
 
 let newButton = function(sound){
   let btnContainer = document.createElement("div");
-  btnContainer.className = "soundRow";
+  btnContainer.className = buttonColor + " sound-button waves-effect waves-light btn-large";
   btnContainer.dataset.filename = sound.file;
   let btn = document.createElement("div");
   btn.appendChild(document.createTextNode(sound.name));
@@ -88,7 +90,7 @@ let newButton = function(sound){
 }
 
 let generalSounds = sounds.general;
-console.log(generalSounds);
+
 for (let i in generalSounds){
   container.appendChild(newButton(generalSounds[i]));
 }
