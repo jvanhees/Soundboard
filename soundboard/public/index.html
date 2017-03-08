@@ -1,25 +1,30 @@
 <html>
   <head>
     <title>Roastboard</title>
+    <link rel="stylesheet" type="text/css" href="css/materialize.min.css">
     <link rel="stylesheet" type="text/css" href="css/base.css">
   </head>
   <body>
-    <h1>Roastboard</h1>
-    <p>
-      Rejoice, you can now share a soundboard with your friends. When you're in the same room when you play a sound, everybody in your room will hear it too. Fill in a roomname below or leave it empty for a random one, share the url to your friends, and enjoy listening to eachother's disappointment when you throw the game.
-    </p>
-    <p>
-      <label>Room name:</label>
-      <input id="roomIdField" type="text"/>
-      <button id="joinRoomButton">join room</button>
-      <span id="roomOccupants">1</span>
-      users
-    </p>
+    <div class="container">
+      <h1>Roastboard</h1>
+      <p>
+        Rejoice, you can now share a soundboard with your friends. When you're in the same room when you play a sound, everybody in your room will hear it too. Fill in a roomname below or leave it empty for a random one, share the url to your friends, and enjoy listening to eachother's disappointment when you throw the game.
+      </p>
+      <p>
+        <label>Room name:</label>
+        <input id="roomIdField" type="text"/>
+        <button id="joinRoomButton">join room</button>
+        <span id="roomOccupants">1</span>
+        users
+      </p>
 
-    <div id="soundbuttons"></div>
-    <p>
-      <a href="/sounds/Archive.zip">Download</a> all the sound files (mp3).
-    </p>
+      <div id="soundbuttons"></div>
+      <p>
+        <a href="/sounds/Archive.zip">Download</a> all the sound files (mp3).
+      </p>
+    </div>
+
     <script src="js/bundle.js"></script>
+    <script src="js/materialize.min.js"></script>
   </body>
 </html>
