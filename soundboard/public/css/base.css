@@ -1,6 +1,11 @@
 header {
-  overflow: auto;
   margin-bottom: 2%;
+}
+
+header .container {
+  position: relative;
+  overflow: visible;
+  padding: 10px 0;
 }
 
 h1 {

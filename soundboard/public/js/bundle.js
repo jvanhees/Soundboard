@@ -19,7 +19,6 @@ let container = document.getElementById("soundbuttons");
 let buttonColor = 'grey';
 let buttonRegex = new RegExp(buttonColor, "g");
 
-
 let play = function(sound){
   if (Server.connected && Server.roomId)
     Server.play(sound);
@@ -88,6 +87,28 @@ let newButton = function(sound){
 
   return btnContainer;
 }
+
+let toggleFullscreen = function(){
+  if ((document.fullScreenElement && document.fullScreenElement !== null) ||    
+   (!document.mozFullScreen && !document.webkitIsFullScreen)) {
+    if (document.documentElement.requestFullScreen) {  
+      document.documentElement.requestFullScreen();  
+    } else if (document.documentElement.mozRequestFullScreen) {  
+      document.documentElement.mozRequestFullScreen();  
+    } else if (document.documentElement.webkitRequestFullScreen) {  
+      document.documentElement.webkitRequestFullScreen(Element.ALLOW_KEYBOARD_INPUT);  
+    }  
+  } else {  
+    if (document.cancelFullScreen) {  
+      document.cancelFullScreen();  
+    } else if (document.mozCancelFullScreen) {  
+      document.mozCancelFullScreen();  
+    } else if (document.webkitCancelFullScreen) {  
+      document.webkitCancelFullScreen();  
+    }  
+  } 
+}
+document.getElementById("fullscreenButton").addEventListener("click", toggleFullscreen);
 
 let generalSounds = sounds.general;
 
