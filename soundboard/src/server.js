@@ -80,9 +80,9 @@ let Server = {
         this.newRoom();
     }
   },
-  play: function(file){
+  play: function(sound){
     if (this.connected){
-      let message = {"request": "play", "sound": file};
+      let message = {"request": "play", "sound": sound};
       this.socket.send(JSON.stringify(message));
     }
   },

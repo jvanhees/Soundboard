@@ -15,16 +15,17 @@ function Room(client, roomId){
 
 Room.prototype = {
   play: function(sound, sourceClient){
-    console.log("playing ", sound, "in room", this.uuid);
-    var soundFile = path.resolve(this.soundsFolder, sound);
-    if (Sounds[sound] == undefined)
-      return;
-    // Play file on the server
-    if (fs.statSync(soundFile) && this.player){
-      this.player.play(soundFile, function(err){
-        if (err)
-          console.log('Couldn\'t play file "' + soundFile + '"');
-      })
+    console.log("playing ", sound.name, "in room", this.uuid);
+    var soundFile = path.resolve(this.soundsFolder, sound.file);
+
+    if(this.uuid == 'server'){
+      // Play file on the server
+      if (fs.statSync(soundFile) && this.player){
+        this.player.play(soundFile, function(err){
+          if (err)
+            console.log('Couldn\'t play file "' + soundFile + '"');
+        });
+      }
     }
     // Send command to clients to play sound
     this.clients.forEach(function(client){
@@ -43,7 +44,6 @@ Room.prototype = {
     this.clients = this.clients.filter(function(c) { return c != client });
     client.currentRoom = undefined;
   }
-
 };
 
 

@@ -12,25 +12,25 @@ window.addEventListener("hashchange", Server.updateFromHash.bind(Server));
 let container = document.getElementById("soundbuttons");
 
 
-let play = function(file){
+let play = function(sound){
   if (Server.connected && Server.roomId)
-    Server.play(file);
-  Server.playSound(file);
+    Server.play(sound);
+  Server.playSound(sound);
 }
 
 let timeouts = {};
 
-Server.playSound = function(file){
-  let a = new Audio('sounds/' + file);
+Server.playSound = function(sound){
+  let a = new Audio('sounds/' + sound.file);
   a.addEventListener('loadedmetadata', function() {
     a.currentTime = 0;
     a.playbackRate = 1;
     a.play(); 
 
-    if (timeouts[file]) {
-      clearTimeout(timeouts[file]);
+    if (timeouts[sound.file]) {
+      clearTimeout(timeouts[sound.file]);
     } else {
-      let element = container.querySelector("[data-filename='" + file + "']");
+      let element = container.querySelector("[data-filename='" + sound.file + "']");
       if (element){
         element.className += " active bump";
         setTimeout(function(){
@@ -39,8 +39,8 @@ Server.playSound = function(file){
       }
     }
 
-    timeouts[file] = setTimeout(function(){
-      soundFinished(file);
+    timeouts[sound.file] = setTimeout(function(){
+      soundFinished(sound.file);
     }, a.duration * 1000);
 
   });
@@ -57,30 +57,33 @@ let soundFinished = function(file){
   delete timeouts[file];
 }
 
-let newButton = function(file, sound){
+let newButton = function(sound){
   let btnContainer = document.createElement("div");
   btnContainer.className = "soundRow";
-  btnContainer.dataset.filename = file;
+  btnContainer.dataset.filename = sound.file;
   let btn = document.createElement("div");
-  btn.appendChild(document.createTextNode(sound.text));
+  btn.appendChild(document.createTextNode(sound.name));
   btn.className = "soundButton";
   btn.addEventListener("click", function(){
-    play(file);
+    play(sound);
   });
   btnContainer.appendChild(btn);
 
-  let sourceLink = document.createElement("a");
-  sourceLink.appendChild(document.createTextNode("youtube"));
-  sourceLink.href = sound.source;
-  sourceLink.target = "_blank";
-  sourceLink.className = "soundSource";
-  btnContainer.appendChild(sourceLink);
+  if(typeof sound.source != 'undefined'){
+    let sourceLink = document.createElement("a");
+    sourceLink.appendChild(document.createTextNode("youtube"));
+    sourceLink.href = sound.source;
+    sourceLink.target = "_blank";
+    sourceLink.className = "soundSource";
+    btnContainer.appendChild(sourceLink);
+  }
 
   return btnContainer;
 }
 
-
-for (var key in sounds){
-  container.appendChild(newButton(key, sounds[key]));
+let generalSounds = sounds.general;
+console.log(generalSounds);
+for (let i in generalSounds){
+  container.appendChild(newButton(generalSounds[i]));
 }
 
