@@ -15,6 +15,14 @@ function Room(client, roomId){
 
 Room.prototype = {
   play: function(sound, sourceClient){
+	// Cheap antispam
+	if(typeof sourceClient.lastPlayed != 'undefined' && sourceClient.lastPlayed > Date.now() - 1000){
+		sourceClient.lastPlayed = Date.now();
+		console.log('Antispam enabled...');
+		return;
+	}
+	sourceClient.lastPlayed = Date.now();
+	
     console.log("playing ", sound.name, "in room", this.uuid);
     var soundFile = path.resolve(this.soundsFolder, sound.file);
 

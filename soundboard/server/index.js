@@ -22,7 +22,7 @@ const server = express()
 const wss = new SocketServer({ server });
 wss.on('connection', (ws) => {
   RequestHandler.handle(Server, ws, {"request": "newClient"});
-
+	
   ws.on('message', function incoming(message) {
     var json = JSON.parse(message);
     RequestHandler.handle(Server, ws, json);
