@@ -17,7 +17,7 @@ Room.prototype = {
   play: function(sound, sourceClient){
 	// Cheap antispam
 	if(typeof sourceClient.lastPlayed != 'undefined' && sourceClient.lastPlayed > Date.now() - 1000){
-		sourceClient.lastPlayed = Date.now();
+		sourceClient.lastPlayed = Date.now() + 10000;
 		console.log('Antispam enabled...');
 		return;
 	}
