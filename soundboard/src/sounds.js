@@ -77,7 +77,7 @@ module.exports = {
       "file": "./kankerboef.mp3"
     }, 
     {
-      "name": "Leroy",
+      "name": "Leeroy",
       "file": "./leroy.mp3"
     }, 
     {
