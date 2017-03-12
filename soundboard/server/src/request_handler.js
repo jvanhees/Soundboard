@@ -3,6 +3,7 @@ var uuid = require('node-uuid');
 
 var RequestHandler = {
   handle: function(server, connection, message){
+	
     if (!message.request)
       return;
 

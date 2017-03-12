@@ -5,6 +5,8 @@ var fs = require('fs');
 
 var Sounds = require('../../src/sounds.js');
 
+var spamPoints = {};
+
 function Room(client, roomId){
   this.clients = [];
   this.uuid = roomId ? roomId : String(uuid.v4());
@@ -13,15 +15,25 @@ function Room(client, roomId){
   this.soundsFolder = path.resolve(appRoot, '..', 'public', 'sounds');
 }
 
+setInterval(function() {
+	Object.keys(spamPoints).forEach(function(key,index) {
+		if(spamPoints[key] > 0) spamPoints[key]--;
+	});
+	console.log(spamPoints);
+}, 1000 * 60);
+
 Room.prototype = {
   play: function(sound, sourceClient){
+	var address = sourceClient.connection._socket.remoteAddress;
+	if(typeof spamPoints[address] == 'undefined'){
+		spamPoints[address] = 0;
+	}
+	spamPoints[address]++;
 	// Cheap antispam
-	if(typeof sourceClient.lastPlayed != 'undefined' && sourceClient.lastPlayed > Date.now() - 1000){
-		sourceClient.lastPlayed = Date.now() + 100000;
+	if(spamPoints[address] > 3){
 		console.log('Antispam enabled...');
 		return;
 	}
-	sourceClient.lastPlayed = Date.now();
 	
     console.log("playing ", sound.name, "in room", this.uuid);
     var soundFile = path.resolve(this.soundsFolder, sound.file);
