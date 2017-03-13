@@ -1,133 +1,133 @@
 module.exports = {
   "general": [
     {
-      "name": "5 euro", 
+      "name": "5 euro",
       "file": "./5-euro.mp3"
-    }, 
+    },
     {
       "name": "Ah fuck",
       "file": "./ah-fuck.mp3"
-    }, 
+    },
     {
       "name": "Allahu Akbar",
       "file": "./allahu-akbar.mp3"
-    }, 
+    },
     {
       "name": "Badumtss",
       "file": "./badumtss.mp3"
-    }, 
+    },
     {
       "name": "Balls of Steel",
       "file": "./ballsofsteel.mp3"
-    }, 
+    },
     {
       "name": "Bazinga",
       "file": "./bazinga.mp3"
-    }, 
+    },
     {
-      "name": "Boomheadshot", 
+      "name": "Boomheadshot",
       "file": "./boomheadshot.mp3"
-    }, 
+    },
     {
       "name": "Bye",
       "file": "./bye-have-a-great-time.mp3"
-    }, 
+    },
     {
       "name": "21th Century Fox",
       "file": "./centuryfox-flute.mp3"
-    }, 
+    },
     {
       "name": "Combobreaker",
       "file": "./combobreaker.mp3"
-    }, 
+    },
     {
       "name": "Drama",
       "file": "./drama.mp3"
-    }, 
+    },
     {
-      "name": "Fuck Slacks", 
+      "name": "Fuck Slacks",
       "file": "./fuck_slacks.mp3"
-    }, 
+    },
     {
       "name": "Geen geld",
       "file": "./geen-geld.mp3"
-    }, 
+    },
     {
       "name": "Ha gay",
       "file": "./ha-gay.mp3"
-    }, 
+    },
     {
-      "name": "He fucked up", 
+      "name": "He fucked up",
       "file": "./he-fucked-up.mp3"
-    }, 
+    },
     {
       "name": "Huge mistake",
       "file": "./huge_mistake.mp3"
-    }, 
+    },
     {
       "name": "Inception",
       "file": "./inception.mp3"
-    }, 
+    },
     {
       "name": "Incorrect",
       "file": "./incorrect.mp3"
-    }, 
+    },
     {
       "name": "Kankerboef",
       "file": "./kankerboef.mp3"
-    }, 
+    },
     {
       "name": "Leeroy",
-      "file": "./leroy.mp3"
-    }, 
+      "file": "./leeroy.mp3"
+    },
     {
       "name": "MLG Airhorn",
       "file": "./mlg-airhorn.mp3"
-    }, 
+    },
     {
       "name": "Nope.avi",
       "file": "./nope.mp3"
-    }, 
+    },
     {
       "name": "Ding Dong",
       "file": "./ns-ding-dong.mp3"
-    }, 
+    },
     {
-      "name": "Who cares", 
+      "name": "Who cares",
       "file": "./omg-who-the-hell-cares.mp3"
-    }, 
+    },
     {
       "name": "Om nom nom",
       "file": "./omnomnomnom.mp3"
-    }, 
+    },
     {
       "name": "Ooh look at it go",
       "file": "./ooh-look-at-it-go.mp3"
-    }, 
+    },
     {
-      "name": "Optyfen gauw", 
+      "name": "Optyfen gauw",
       "file": "./Optieffuhh, gauw!.mp3"
-    }, 
+    },
     {
       "name": "Fart",
       "file": "./perfect-fart.mp3"
     },
     {
-      "name": "Ragequit", 
+      "name": "Ragequit",
       "file": "./rage-quit.mp3"
-    }, 
+    },
     {
-      "name": "Retard alert", 
+      "name": "Retard alert",
       "file": "./retard-alert.mp3"
-    }, 
+    },
     {
       "name": "Man man man",
       "file": "./rob-geus-man-man-man.mp3"
-    }, 
+    },
     {
       "name": "Sad Trombone",
       "file": "./sadtrombone.mp3"
-    }, 
+    },
     {
       "name": "Screaming sheep",
       "file": "./screaming-sheep.mp3"
@@ -135,45 +135,45 @@ module.exports = {
     {
       "name": "Smoke weed",
       "file": "./snoop-dogg-smoke-weed-everyday.mp3"
-    }, 
+    },
     {
-      "name": "Suprise motherfucker", 
+      "name": "Suprise motherfucker",
       "file": "./surprise-motherfucker.mp3"
     },
     {
       "name": "Sad",
       "file": "./tf_nemesis.mp3"
-    }, 
+    },
     {
-      "name": "Trololol short", 
+      "name": "Trololol short",
       "file": "./trololo-short.mp3"
-    }, 
+    },
     {
       "name": "Trololol long",
       "file": "./trololo.mp3"
-    }, 
+    },
     {
-      "name": "Vieze Tyfuslijer", 
+      "name": "Vieze Tyfuslijer",
       "file": "./vieze-tyfuslijer.mp3"
-    }, 
+    },
     {
       "name": "Wololo",
       "file": "./wololo.mp3"
-    }, 
+    },
     {
-      "name": "Wombo Combo", 
+      "name": "Wombo Combo",
       "file": "./wombo-combo.mp3"
-    }, 
+    },
     {
-      "name": "Oooooooooh", 
+      "name": "Oooooooooh",
       "file": "./woooooooooooooooooooooo.mp3"
-    }, 
+    },
     {
       "name": "Wow",
       "file": "./wow.mp3"
-    }, 
+    },
     {
-      "name": "Yeeeeaaaaaahhhh", 
+      "name": "Yeeeeaaaaaahhhh",
       "file": "./yeah.mp3"
     }
   ],
