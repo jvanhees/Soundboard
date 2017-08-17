@@ -6,6 +6,7 @@ function Client(connection) {
 	this.connection = connection;
 	this.lastPlayed = 0;
 	this.soundsPlayed = 0;
+	this.secondsPlayed = 0;
 }
 
 Client.prototype = {

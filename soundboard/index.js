@@ -13,25 +13,26 @@ let container = document.getElementById("soundbuttons");
 let buttonColor = 'grey';
 let buttonRegex = new RegExp(buttonColor, "g");
 
-let play = function(sound){
+let play = function(sound, category){
 	if (Server.connected && Server.roomId)
-		Server.play(sound);
-	Server.playSound(sound);
+		Server.play(sound, category);
+	Server.playSound(sound, category);
 }
 
 let timeouts = {};
 
-Server.playSound = function(sound){
-	let a = new Audio('sounds/' + sound.file);
+Server.playSound = function(sound, category){
+	var soundFile = category + '/' + sound.file;
+	let a = new Audio('sounds/' + soundFile);
 	a.addEventListener('loadedmetadata', function() {
 		a.currentTime = 0;
 		a.playbackRate = 1;
 		a.play(); 
 
-		if (timeouts[sound.file]) {
-			clearTimeout(timeouts[sound.file]);
+		if (timeouts[soundFile]) {
+			clearTimeout(timeouts[soundFile]);
 		} else {
-			let element = container.querySelector("[data-filename='" + sound.file + "']");
+			let element = container.querySelector("[data-filename='" + soundFile + "']");
 			if (element){
 				element.className = element.className.replace(buttonRegex, "orange darken-4");
 				setTimeout(function(){
@@ -40,8 +41,8 @@ Server.playSound = function(sound){
 			}
 		}
 
-		timeouts[sound.file] = setTimeout(function(){
-			soundFinished(sound.file);
+		timeouts[soundFile] = setTimeout(function(){
+			soundFinished(soundFile);
 		}, a.duration * 1000);
 
 	});
@@ -58,29 +59,33 @@ let soundFinished = function(file){
 	delete timeouts[file];
 }
 
-let newButton = function(sound){
-	console.log(sound);
+let newButton = function(sound, category){
+	console.log(category);
+
 	let btnContainer = document.createElement("div");
 	btnContainer.className = buttonColor + " sound-button waves-effect waves-light btn-large";
-	btnContainer.dataset.filename = sound.file;
+	btnContainer.dataset.filename = category + '/' + sound.file;
+
 	let btn = document.createElement("div");
 	btn.appendChild(document.createTextNode(sound.name));
 	btn.className = "soundButton";
 	btn.addEventListener("click", function(){
-		play(sound);
+		play(sound, category);
 	});
 	btnContainer.appendChild(btn);
 
-	if(typeof sound.source != 'undefined'){
-		let sourceLink = document.createElement("a");
-		sourceLink.appendChild(document.createTextNode("youtube"));
-		sourceLink.href = sound.source;
-		sourceLink.target = "_blank";
-		sourceLink.className = "soundSource";
-		btnContainer.appendChild(sourceLink);
-	}
-
 	return btnContainer;
+}
+
+let newCategory = function(category) {
+	let catContainer = document.createElement("div");
+	catContainer.className = category;
+
+	let title = document.createElement("h2");
+	title.appendChild(document.createTextNode(category));
+
+	catContainer.appendChild(title);
+	return catContainer;
 }
 
 let toggleFullscreen = function(){
@@ -105,9 +110,15 @@ let toggleFullscreen = function(){
 }
 document.getElementById("fullscreenButton").addEventListener("click", toggleFullscreen);
 
-let generalSounds = sounds.general;
+var categories = {};
+for (var category in sounds) {
 
-for (let i in generalSounds){
-	container.appendChild(newButton(generalSounds[i]));
+	categoryContainer = newCategory(category);
+
+	for (let i in sounds[category]){
+		categoryContainer.appendChild(newButton(sounds[category][i], category));
+	}
+
+	container.appendChild(categoryContainer);
 }
 

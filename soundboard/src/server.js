@@ -26,6 +26,9 @@ let Server = {
 			case "roomOccupants":
 				this.roomCounter.innerHTML = data.roomOccupants;
 				break;
+			case "notify":
+				Materialize.toast(data.message, 4000)
+
 		}
 	},
 	
@@ -93,9 +96,9 @@ let Server = {
 		}
 	},
 	
-	play: function(sound){
+	play: function(sound, category){
 		if (this.connected){
-			let message = {"request": "play", "sound": sound};
+			let message = {"request": "play", "sound": sound, "category": category};
 			this.socket.send(JSON.stringify(message));
 		}
 	},

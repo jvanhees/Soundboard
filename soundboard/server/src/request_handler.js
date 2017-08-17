@@ -37,7 +37,7 @@ var RequestHandler = {
         break;
       case "play":
         if (client && client.currentRoom && message.sound)
-          client.currentRoom.play(message.sound, client);
+          client.currentRoom.play(message.sound, message.category, client);
         break;
       case "disconnect":
         if (client){
