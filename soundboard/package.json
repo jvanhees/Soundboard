@@ -10,22 +10,28 @@
     "build": "browserify index.js -o public/js/bundle.js"
   },
   "dependencies": {
-    "browserify": "^13.1.1",
-    "budo": "^9.2.1",
     "express": "^4.14.0",
     "music-metadata": "^0.7.10",
     "node-uuid": "^1.4.7",
     "play-sound": "^1.1.1",
     "ws": "^1.1.1"
   },
+  "devDependencies": {
+    "budo": "^9.2.1",
+    "browserify": "^13.1.1"
+  },
+  "bundledDependencies": ["express", "music-metadata", "node-uuid", "play-sound", "ws"],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/dorsath/roastboard.git"
+    "url": "git+https://github.com/jvanhees/Soundboard.git"
+  },
+  "engines": {
+    "node": "8.8.1"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/dorsath/roastboard/issues"
+    "url": "https://github.com/jvanhees/Soundboard/issues"
   },
-  "homepage": "https://github.com/dorsath/roastboard#readme"
+  "homepage": "https://github.com/jvanhees/Soundboard#readme"
 }
