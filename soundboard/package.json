@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "A soundboard to use with friends over the network.",
   "main": "src/index.js",
+  "bin": "./server/index.js",
   "scripts": {
     "start": "node server/index.js",
     "dev": "budo index.js:public/js/bundle.js --serve js/bundle.js --live --open --dir ./public -v",

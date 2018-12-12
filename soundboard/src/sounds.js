@@ -1,299 +1,371 @@
 module.exports = {
   "general": [
     {
-      "name": "Ah fuck",
-      "file": "ah-fuck.mp3"
+      "name": "Ah fuck asd",
+      "file": "ah-fuck.mp3",
+      "precense": 1
     },
     {
       "name": "Allahu Akbar",
-      "file": "allahu-akbar.mp3"
+      "file": "allahu-akbar.mp3",
+      "precense": 3
     },
     {
       "name": "Badumtss",
-      "file": "badumtss.mp3"
+      "file": "badumtss.mp3",
+      "precense": 1
     },
     {
       "name": "Balls of Steel",
-      "file": "ballsofsteel.mp3"
+      "file": "ballsofsteel.mp3",
+      "precense": 3
     },
     {
       "name": "Bazinga",
-      "file": "bazinga.mp3"
+      "file": "bazinga.mp3",
+      "precense": 1
     },
     {
       "name": "Boomheadshot",
-      "file": "boomheadshot.mp3"
+      "file": "boomheadshot.mp3",
+      "precense": 3
     },
     {
       "name": "Bye",
-      "file": "bye-have-a-great-time.mp3"
+      "file": "bye-have-a-great-time.mp3",
+      "precense": 3
     },
     {
       "name": "21th Century Fox",
-      "file": "centuryfox-flute.mp3"
+      "file": "centuryfox-flute.mp3",
+      "precense": 4
     },
     {
       "name": "Combobreaker",
-      "file": "combobreaker.mp3"
+      "file": "combobreaker.mp3",
+      "precense": 1
     },
     {
       "name": "Drama",
-      "file": "drama.mp3"
+      "file": "drama.mp3",
+      "precense": 3
     },
     {
       "name": "Ha gay",
-      "file": "ha-gay.mp3"
+      "file": "ha-gay.mp3",
+      "precense": 3
     },
     {
       "name": "He fucked up",
-      "file": "he-fucked-up.mp3"
+      "file": "he-fucked-up.mp3",
+      "precense": 3
     },
     {
       "name": "Huge mistake",
-      "file": "huge_mistake.mp3"
+      "file": "huge_mistake.mp3",
+      "precense": 1
     },
     {
       "name": "Inception",
-      "file": "inception.mp3"
+      "file": "inception.mp3",
+      "precense": 4
     },
     {
       "name": "Incorrect",
-      "file": "incorrect.mp3"
+      "file": "incorrect.mp3",
+      "precense": 1
     },
     {
       "name": "Leeroy",
-      "file": "leeroy.mp3"
+      "file": "leeroy.mp3",
+      "precense": 4
     },
     {
       "name": "MLG Airhorn",
-      "file": "mlg-airhorn.mp3"
+      "file": "mlg-airhorn.mp3",
+      "precense": 4
     },
     {
       "name": "Nope.avi",
-      "file": "nope.mp3"
+      "file": "nope.mp3",
+      "precense": 1
     },
     {
       "name": "Ding Dong",
-      "file": "ns-ding-dong.mp3"
+      "file": "ns-ding-dong.mp3",
+      "precense": 3
     },
     {
       "name": "Who cares",
-      "file": "omg-who-the-hell-cares.mp3"
+      "file": "omg-who-the-hell-cares.mp3",
+      "precense": 3
     },
     {
       "name": "Om nom nom",
-      "file": "omnomnomnom.mp3"
+      "file": "omnomnomnom.mp3",
+      "precense": 3
     },
     {
       "name": "Fart",
-      "file": "perfect-fart.mp3"
+      "file": "perfect-fart.mp3",
+      "precense": 1
     },
     {
       "name": "Ragequit",
-      "file": "rage-quit.mp3"
+      "file": "rage-quit.mp3",
+      "precense": 3
     },
     {
       "name": "Retard alert",
-      "file": "retard-alert.mp3"
+      "file": "retard-alert.mp3",
+      "precense": 3
     },
     {
       "name": "Sad Trombone",
-      "file": "sadtrombone.mp3"
+      "file": "sadtrombone.mp3",
+      "precense": 3
     },
     {
       "name": "Screaming sheep",
-      "file": "screaming-sheep.mp3"
+      "file": "screaming-sheep.mp3",
+      "precense": 3
     },
     {
       "name": "Smoke weed",
-      "file": "snoop-dogg-smoke-weed-everyday.mp3"
+      "file": "snoop-dogg-smoke-weed-everyday.mp3",
+      "precense": 3
     },
     {
       "name": "Suprise motherfucker",
-      "file": "surprise-motherfucker.mp3"
+      "file": "surprise-motherfucker.mp3",
+      "precense": 3
     },
     {
       "name": "Sad",
-      "file": "tf_nemesis.mp3"
+      "file": "tf_nemesis.mp3",
+      "precense": 4
     },
     {
       "name": "Trololol short",
-      "file": "trololo-short.mp3"
+      "file": "trololo-short.mp3",
+      "precense": 1
     },
     {
       "name": "Trololol long",
-      "file": "trololo.mp3"
+      "file": "trololo.mp3",
+      "precense": 4
     },
     {
       "name": "Wololo",
-      "file": "wololo.mp3"
+      "file": "wololo.mp3",
+      "precense": 3
     },
     {
       "name": "Wombo Combo",
-      "file": "wombo-combo.mp3"
+      "file": "wombo-combo.mp3",
+      "precense": 5
     },
     {
       "name": "Oooooooooh",
-      "file": "woooooooooooooooooooooo.mp3"
+      "file": "woooooooooooooooooooooo.mp3",
+      "precense": 4
     },
     {
       "name": "Wow",
-      "file": "wow.mp3"
+      "file": "wow.mp3",
+      "precense": 1
     },
     {
       "name": "Yeeeeaaaaaahhhh",
-      "file": "yeah.mp3"
+      "file": "yeah.mp3",
+      "precense": 4
     }
   ],
   "dota2": [
     {
       "name": "He's about to pop", 
-      "file": "about_to_pop.mp3"
+      "file": "about_to_pop.mp3",
+      "precense": 3
     }, 
     {
       "name": "All dead",
-      "file": "all_dead.wav"
+      "file": "all_dead.wav",
+      "precense": 3
     }, 
     {
       "name": "Ай-ай-ай-ай-ай", 
-      "file": "ay_ay_ay.wav"
+      "file": "ay_ay_ay.wav",
+      "precense": 3
     }, 
     {
       "name": "Боже, ты посмотри вокруг, что происходит!", 
-      "file": "bozhe_ti_posmotri.wav"
+      "file": "bozhe_ti_posmotri.wav",
+      "precense": 3
     }, 
     {
       "name": "Brutal. Savage. Rekt.", 
-      "file": "brutal.wav"
+      "file": "brutal.wav",
+      "precense": 3
     }, 
     {
       "name": "Charge", 
-      "file": "charge.wav"
+      "file": "charge.wav",
+      "precense": 1
     }, 
     {
       "name": "Crash and burn", 
-      "file": "crash_burn.wav"
+      "file": "crash_burn.wav",
+      "precense": 2
     }, 
     {
       "name": "Crickets", 
-      "file": "cricket.wav"
+      "file": "cricket.wav",
+      "precense": 1
     }, 
     {
       "name": "Applause", 
-      "file": "Crowd_lv_02.wav"
+      "file": "Crowd_lv_02.wav",
+      "precense": 2
     }, 
     {
       "name": "Crybaby", 
-      "file": "crybaby.wav"
+      "file": "crybaby.wav",
+      "precense": 2
     }, 
     {
       "name": "It's a disaster!", 
-      "file": "disastah.wav"
+      "file": "disastah.wav",
+      "precense": 3
     }, 
     {
       "name": "Drum roll", 
-      "file": "drum_roll.wav"
+      "file": "drum_roll.wav",
+      "precense": 3
     }, 
     {
       "name": "Это ГГ", 
-      "file": "ehto_g_g.wav"
+      "file": "ehto_g_g.wav",
+      "precense": 3
     }, 
     {
       "name": "Это. Просто. Нечто.", 
-      "file": "eto_prosto_netchto.wav"
+      "file": "eto_prosto_netchto.wav",
+      "precense": 3
     }, 
     {
       "name": "Frog", 
-      "file": "frog.wav"
+      "file": "frog.wav",
+      "precense": 1
     }, 
     {
       "name": "Fuck slacks", 
-      "file": "fuck_slacks.mp3"
+      "file": "fuck_slacks.mp3",
+      "precense": 1
     }, 
     {
       "name": "Headshake", 
-      "file": "headshake.wav"
+      "file": "headshake.wav",
+      "precense": 1
     }, 
     {
       "name": "加油!", 
-      "file": "jia_you.wav"
+      "file": "jia_you.wav",
+      "precense": 3
     }, 
     {
       "name": "Look at it go", 
-      "file": "look_at_it_go.mp3"
+      "file": "look_at_it_go.mp3",
+      "precense": 3
     }, 
     {
       "name": "Nononono", 
-      "file": "nononono.mp3"
+      "file": "nononono.mp3",
+      "precense": 3
     }, 
     {
       "name": "Patience from Zhou",
-      "file": "patience.wav"
+      "file": "patience.wav",
+      "precense": 3
     }, 
     {
       "name": "破两路更好打, 是吧?", 
-      "file": "po_liang_lu.wav"
+      "file": "po_liang_lu.wav",
+      "precense": 3
     }, 
     {
       "name": "Rimshot", 
-      "file": "rimshot.wav"
+      "file": "rimshot.wav",
+      "precense": 1
     }, 
     {
       "name": "Sad trombone", 
-      "file": "sad_bone.wav"
+      "file": "sad_bone.wav",
+      "precense": 1
     },
     {
       "name": "天火!", 
-      "file": "tian_huo.wav"
+      "file": "tian_huo.wav",
+      "precense": 3
     }, 
     {
       "name": "玩不了啦!", 
-      "file": "wan_bu_liao_la.wav"
+      "file": "wan_bu_liao_la.wav",
+      "precense": 3
     }, 
     {
       "name": "Wow!", 
-      "file": "wow.wav"
+      "file": "wow.wav",
+      "precense": 2
     }, 
     {
       "name": "Zaaap", 
-      "file": "zaaap.mp3"
+      "file": "zaaap.mp3",
+      "precense": 2
     }, 
     {
       "name": "Жил до конца, умер как герой", 
-      "file": "zhil_do_konsta.wav"
+      "file": "zhil_do_konsta.wav",
+      "precense": 3
     }, 
     {
       "name": "走好, 不送", 
-      "file": "zou_hao_bu_song.wav"
+      "file": "zou_hao_bu_song.wav",
+      "precense": 3
     }
   ],
   "nl": [
      {
       "name": "5 euro?", 
-      "file": "./5-euro.mp3"
+      "file": "./5-euro.mp3",
+      "precense": 3
     }, 
     {
       "name": "Geen geld",
-      "file": "./geen-geld.mp3"
+      "file": "./geen-geld.mp3",
+      "precense": 3
     }, 
     {
       "name": "Kankerboef", 
-      "file": "./kankerboef.mp3"
+      "file": "./kankerboef.mp3",
+      "precense": 2
     }, 
     {
       "name": "Optieffuhh, gauw!", 
-      "file": "./Optieffuhh, gauw!.mp3"
+      "file": "./Optieffuhh, gauw!.mp3",
+      "precense": 3
     }, 
     {
       "name": "Man man man", 
-      "file": "./rob-geus-man-man-man.mp3"
+      "file": "./rob-geus-man-man-man.mp3",
+      "precense": 3
     },
     {
       "name": "Vieze tyfuslijer", 
-      "file": "./vieze-tyfuslijer.mp3"
+      "file": "./vieze-tyfuslijer.mp3",
+      "precense": 3
     }
   ],
-  "purge": [
+  /* "purge": [
     {
       "file": "time_spent_worthless.mp3",
       "name": "The way that you're spending your time right now is just so worthless",
@@ -424,5 +496,5 @@ module.exports = {
       "name": "That was a pretty big mistake",
       "source": "https://www.youtube.com/watch?v=DiZzrBWhG4o&feature=youtu.be&t=2742"
     }
-  ]
+  ] */
 }
