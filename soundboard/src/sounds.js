@@ -1,4 +1,4 @@
-module.exports = {
+﻿module.exports = {
   "general": [
     {
       "name": "Ah fuck asd",
@@ -362,6 +362,73 @@ module.exports = {
     {
       "name": "Vieze tyfuslijer", 
       "file": "./vieze-tyfuslijer.mp3",
+      "presence": 3
+    }
+  ],
+  "uganda": [
+     {
+      "name": "Action is Coming", 
+      "file": "./Action_is_Coming.mp3",
+      "presence": 3
+    }, 
+    {
+      "name": "Commando_1",
+      "file": "./Commando_1.mp3",
+      "presence": 3
+    }, 
+    {
+      "name": "Commando_2", 
+      "file": "./Commando_2.mp3",
+      "presence": 2
+    }, 
+    {
+      "name": "Deadly Commandos!", 
+      "file": "./Deadly_Commandos.mp3",
+      "presence": 3
+    }, 
+    {
+      "name": "Expect the Unexpectable", 
+      "file": "./Expect_the_Unexpectable.mp3",
+      "presence": 3
+    },
+    {
+      "name": "Gwa Gwa Gwa", 
+      "file": "./Gwe_Gwe_Gwe.mp3",
+      "presence": 3
+    },
+    {
+      "name": "I_Prefer_Men", 
+      "file": "./I_Prefer_Men.mp3",
+      "presence": 3
+    },
+    {
+      "name": "It's Time to Party", 
+      "file": "./Its_Time_to_Party.mp3",
+      "presence": 3
+    },
+    {
+      "name": "This is How We Do Action", 
+      "file": "./This_is_How_We_Do_Action_in_Uganda.mp3",
+      "presence": 3
+    },
+    {
+      "name": "Supa Soldiers", 
+      "file": "./Time_to_Bring_in_Supa_Soldiers.mp3",
+      "presence": 3
+    },
+    {
+      "name": "Tough Commandos", 
+      "file": "./Tough_Commandos_on_da_Mission.mp3",
+      "presence": 3
+    },
+    {
+      "name": "Ugandan Bruce Lee"
+      "file": "./Ugandan_Bruce_Lee.mp3"
+      "presence": 3
+    },
+    {
+      "name": "We Call Him Bruce U"
+      "file": "./We_Call_Him_Bruce_U.mp3"
       "presence": 3
     }
   ],
