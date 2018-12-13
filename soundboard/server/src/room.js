@@ -8,7 +8,7 @@ var mm = require('music-metadata');
 var Sounds = require('../../src/sounds.js');
 
 var spamTimeout = 120;
-var maxSounds = 2;
+var maxSounds = 3;
 var maxSeconds = 10;
 
 function formatTime(value) {
@@ -30,20 +30,36 @@ Room.prototype = {
 
 		var now = new Date();
 		var allowedDate = now.getTime() - (spamTimeout * 1000);
+
+		sound = this.findSound(sound, category);
+
+		if (sound === null) {
+			sourceClient.send(JSON.stringify({"command": "notify", "message": "Sound not found on the server!"}));
+			return;
+		}
+
+		// Check if the sound is not too invasive to be played on the server
+		if (sound.presence >= 4) {
+			sourceClient.send(JSON.stringify({"command": "notify", "message": "This sound is too invasive for the server!"}));
+			return;
+		}
+
+		var remaining = Math.round((sourceClient.lastPlayed - allowedDate) / 1000);
 		
+		// Check if client has 'playing credits' left
 		if (sourceClient.soundsPlayed >= maxSounds && sourceClient.lastPlayed > allowedDate) {
 			// Not allowed to play a sound
-			var remaining = Math.round((sourceClient.lastPlayed - allowedDate) / 1000);
-			var message = 'You can only send ' + maxSounds + ' sounds every ' + (spamTimeout / 60) + ' minutes. (' + formatTime(remaining) + ')';
+			var message = 'You can only send ' + maxSounds + ' non-invasive sounds every ' + (spamTimeout / 60) + ' minutes. (' + formatTime(remaining) + ')';
 			sourceClient.send(JSON.stringify({"command": "notify", "message": message}));
 			return;
 
-		} else if (sourceClient.secondsPlayed >= maxSeconds && sourceClient.lastPlayed > allowedDate) {
-			var remaining = Math.round((sourceClient.lastPlayed - allowedDate) / 1000);
-			var message = 'You can only send ' + maxSeconds + ' seconds of audio every ' + (spamTimeout / 60) + ' minutes. (' + formatTime(remaining) + ')';
+		}
+
+		if (sourceClient.soundsPlayed + sound.presence > maxSounds) {
+			// Client doesn't have enough sound credits to play this sound...
+			var message = 'This sound is too invasive for you to send right now (' + formatTime(remaining) + ').';
 			sourceClient.send(JSON.stringify({"command": "notify", "message": message}));
 			return;
-
 		}
 
 		if (sourceClient.soundsPlayed >= maxSounds) {
@@ -51,25 +67,11 @@ Room.prototype = {
 			sourceClient.soundsPlayed = 0;
 		}
 
-		if (sourceClient.secondsPlayed >= maxSeconds) {
-			// Max seconds played, but longer than spamTimeout ago...
-			sourceClient.secondsPlayed = 0;
-		}
-
-		sourceClient.soundsPlayed++;
+		sourceClient.soundsPlayed = sourceClient.soundsPlayed + sound.presence;
 		sourceClient.lastPlayed = now.getTime();
 
 		console.log("playing ", sound.name, "in room", this.uuid);
 		var soundFile = path.resolve(this.soundsFolder, category, sound.file);
-
-		mm.parseFile(soundFile, { duration: true })
-			.then(function (metadata) {
-				sourceClient.secondsPlayed += metadata.format.duration;
-				console.log(sourceClient.secondsPlayed);
-			})
-			.catch(function (err) {
-				console.error(err);
-			});
 
 		if(this.uuid == 'server'){
 			// Play file on the server
@@ -99,6 +101,16 @@ Room.prototype = {
 	removeClient: function(client){
 		this.clients = this.clients.filter(function(c) { return c != client });
 		client.currentRoom = undefined;
+	},
+
+	findSound: function(sound, category) {
+		originalSound = null;
+		Sounds[category].forEach(function(serverSound) {
+			if (serverSound.file === sound.file) {
+				originalSound = serverSound;
+			}
+		});
+		return originalSound;
 	}
 };
 

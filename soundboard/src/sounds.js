@@ -1,9 +1,9 @@
 module.exports = {
   "general": [
     {
-      "name": "Ah fuck asd",
+      "name": "Ah fuck",
       "file": "ah-fuck.mp3",
-      "presence": 1
+      "presence": 2
     },
     {
       "name": "Allahu Akbar",
@@ -83,7 +83,7 @@ module.exports = {
     {
       "name": "MLG Airhorn",
       "file": "mlg-airhorn.mp3",
-      "presence": 4
+      "presence": 3
     },
     {
       "name": "Nope.avi",
